@@ -32,12 +32,7 @@ export function Header() {
             >
               Подготовка
             </a>
-            <a
-              href="#contact"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Контакты
-            </a>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,13 +79,7 @@ export function Header() {
             >
               Подготовка
             </a>
-            <a
-              href="#contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Контакты
-            </a>
+
           </div>
         </div>
       </nav>

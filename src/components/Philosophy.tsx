@@ -32,8 +32,8 @@ export function Philosophy() {
             }`}
           >
             <img
-              src="/minimalist-japanese-interior-design-with-natural-w.jpg"
-              alt="Минималистичный интерьер с натуральным деревом"
+              src="https://cdn.poehali.dev/projects/654d58f8-5e24-4de2-aad2-99013961fe88/files/27504752-bcdd-4b49-8830-eb8ca18d164a.jpg"
+              alt="Школьник готовится к ЕГЭ за столом"
               className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Overlay accent */}

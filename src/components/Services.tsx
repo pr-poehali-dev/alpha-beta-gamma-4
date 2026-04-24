@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 
 const services = [
   {
     title: "Русский язык",
+    href: "/subjects/russian",
     description: "Структура экзамена, разбор заданий 1–27, критерии сочинения и типичные ошибки. Изменения в КИМ 2027.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -12,6 +14,7 @@ const services = [
   },
   {
     title: "Математика",
+    href: "/subjects/math",
     description: "База и профиль: разбор тем, формулы, алгоритмы решения задач. Подробный разбор второй части.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -21,6 +24,7 @@ const services = [
   },
   {
     title: "Обществознание",
+    href: "/subjects/social",
     description: "Самый популярный предмет по выбору. Все блоки: право, экономика, социология, политика и философия.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -30,6 +34,7 @@ const services = [
   },
   {
     title: "Другие предметы",
+    href: "/subjects/other",
     description: "История, физика, химия, биология, информатика, иностранные языки, география и литература — материалы по каждому.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
@@ -84,9 +89,10 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-px bg-border">
           {services.map((service, index) => (
-            <div
+            <Link
+              to={service.href}
               key={service.title}
-              className={`group bg-background p-10 lg:p-14 transition-all duration-1000 hover:bg-card ${
+              className={`group bg-background p-10 lg:p-14 transition-all duration-1000 hover:bg-card block ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}
@@ -94,9 +100,10 @@ export function Services() {
               <div className="text-sage mb-6 transition-transform duration-500 group-hover:scale-110">
                 {service.icon}
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{service.title}</h3>
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4 group-hover:text-sage transition-colors duration-500">{service.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-            </div>
+              <p className="text-xs tracking-widest uppercase text-terracotta mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Читать далее →</p>
+            </Link>
           ))}
         </div>
       </div>

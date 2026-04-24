@@ -24,9 +24,7 @@ export function Footer() {
               <a href="#process" className="text-sm text-foreground hover:text-sage transition-colors">
                 Подготовка
               </a>
-              <a href="#contact" className="text-sm text-foreground hover:text-sage transition-colors">
-                Контакты
-              </a>
+
             </nav>
           </div>
 
